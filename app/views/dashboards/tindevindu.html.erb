@@ -1,0 +1,33 @@
+<script>
+    $(function(){ //DOM Ready
+        $(".gridster ul").gridster({
+            widget_margins: [5, 5],
+            widget_base_dimensions: [280, 340],
+            min_cols: 6
+        });
+    });
+</script>
+
+
+<div class="gridster">
+    <ul>
+        <li data-row="1" data-col="1" data-sizex="3" data-sizey="1">
+            <numberwidget class="widget" title="Omsetning" data="data.tv_revenue"></numberwidget>
+        </li>
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+            <numberwidget class="widget" title="Oppsalg"></numberwidget>
+        </li>
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+            <numberwidget class="widget" title="Tilbud"></numberwidget>
+        </li>
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+            <listwidget title="Kurser" items="data.currency" unordered></listwidget>
+        </li>
+        <li data-row="1" data-col="1" data-sizex="3" data-sizey="1">
+            <badgeswidget class="widget widget-badges" title="Funnel" items="data.tv_funnel.items"></badgeswidget>
+        </li>
+        <li data-row="1" data-col="1" data-sizex="3" data-sizey="1">
+            <badgeswidget class="widget widget-badges" title="Fulfilment" items="data.tv_process.items"></badgeswidget>
+        </li>
+    </ul>
+</div>

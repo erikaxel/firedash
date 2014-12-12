@@ -1,0 +1,44 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #fff;
+$value-color:       #000;
+
+$title-color:       #000;
+$moreinfo-color:    rgba(0, 0, 0, 0.7);
+
+// ----------------------------------------------------------------------------
+// Widget-badges styles
+// ----------------------------------------------------------------------------
+.label-as-badge {
+  border-radius: 1em;
+  margin-right: 10px;
+}
+
+.widget-badges {
+
+  background-color: $background-color;
+
+  .title {
+    color: $title-color;
+  }
+
+  .value {
+    color: $value-color;
+  }
+
+  .badge-container {
+    font-weight: 500;
+    font-size: 65px;
+    color: $value-color;
+  }
+
+  .more-info {
+    color: $moreinfo-color;
+  }
+
+  .updated-at {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+}

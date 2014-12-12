@@ -1,0 +1,10 @@
+<h1 class="title" data-bind="title">{{title}}</h1>
+
+<h2 class="value">{{data.current | numeraljs:'0.0a'}}</h2>
+<p class="change-rate">
+  <i data-bind-class="arrow"></i><span>{{difference | numeraljs:'0.0a'}}</span>
+</p>
+
+<p class="more-info">{{moreinfo}}</p>
+
+<p class="updated-at">{{updatedAtMessage}}</p>
