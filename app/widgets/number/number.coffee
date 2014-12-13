@@ -9,7 +9,6 @@ angular.module("widgets").directive "numberwidget", ->
     $scope.updateDiff  = ->
       if $scope.data.current && $scope.data.budget
         $scope.difference = $scope.data.current - $scope.data.budget
-        console.log $scope.difference
 
         $element.removeClass 'status-ok status-warning'
 
