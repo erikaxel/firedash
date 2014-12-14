@@ -4,7 +4,7 @@ angular.module("firedash-directives").directive "animatedNumber", ->
   scope:
     ngModel: '='
   template: "<span>{{value | numeraljs:'0.0a'}}</span>"
-  controller: ($scope, $element, $timeout) ->
+  controller: ['$scope', '$element', '$timeout', ($scope, $element, $timeout) ->
     $scope.$watch 'ngModel', (newVal, oldVal) ->
       if newVal?
         if oldVal? # Only up if we already have a value. This avoids counting up on refresh
@@ -21,3 +21,4 @@ angular.module("firedash-directives").directive "animatedNumber", ->
         , 10
       else
         $scope.value = to
+  ]

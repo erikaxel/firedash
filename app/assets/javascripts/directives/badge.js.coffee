@@ -7,7 +7,7 @@ angular.module("firedash-directives").directive "badge", ->
     ngModel: '='
     filter: '@'
 
-  controller: ($scope, $element, $filter, $interpolate) ->
+  controller: ['$scope', '$element', '$filter', '$interpolate', ($scope, $element, $filter, $interpolate) ->
     $scope.$watch 'ngModel',(newVal, oldVal) ->
       if newVal?
         item = $scope.ngModel
@@ -26,3 +26,4 @@ angular.module("firedash-directives").directive "badge", ->
 
         # This is to make sure we can use our filter. There might be an easier way, but I have not found it
         $scope.filteredValue = $scope.$eval($interpolate("{{ngModel.value | #{$scope.filter} }}"))
+  ]

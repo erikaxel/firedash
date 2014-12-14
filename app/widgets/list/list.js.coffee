@@ -1,6 +1,5 @@
 angular.module("widgets").directive "listwidget", ->
   restrict: "E", # we are an element
-#  transclude: true, #use if we should wrap content
   templateUrl: 'widgets/list.html',
   scope:
     title: '@'
