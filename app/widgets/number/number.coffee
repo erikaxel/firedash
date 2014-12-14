@@ -7,7 +7,7 @@ angular.module("widgets").directive "numberwidget", ->
     data: '='
   controller: ($scope, $element) ->
     $scope.updateDiff  = ->
-      if $scope.data.current && $scope.data.budget
+      if $scope.data.current? && $scope.data.budget?
         $scope.difference = $scope.data.current - $scope.data.budget
 
         $element.removeClass 'status-ok status-warning'
@@ -21,9 +21,9 @@ angular.module("widgets").directive "numberwidget", ->
 #      $scope.updateDiff() if newVal
 
     $scope.$watch 'data.current', (newVal, oldVal) ->
-      if newVal
+      if newVal?
         $scope.updateDiff()
-        if oldVal && newVal > oldVal
+        if oldVal? && newVal > oldVal
           console.log "Yihaa!"
           $.get 'http://127.0.0.1:3000/easy', (data) ->
 

@@ -1,5 +1,6 @@
 angular.module("widgets",[])
-angular.module('dash', ['ngRoute', 'firebase', 'ngNumeraljs', 'widgets'])
+angular.module("firedash-directives",[])
+angular.module('dash', ['ngRoute', 'firebase', 'ngNumeraljs', 'widgets', 'firedash-directives'])
   .value("fbURL", "https://scorching-inferno-3070.firebaseio.com/")
   .factory("Data", ($firebase, fbURL) ->
     $firebase(new Firebase(fbURL)).$asObject()

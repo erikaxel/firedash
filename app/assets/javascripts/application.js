@@ -15,5 +15,6 @@
 //= require turbolinks
 //= require jquery.gridster.min
 //= require angularjs-numeral.min
-//= require_tree .
+//= require app
+//= require_tree ./directives
 //= require_tree ../../widgets
