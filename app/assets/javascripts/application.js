@@ -19,5 +19,4 @@
 //= require angular-moment.min
 //= require app
 //= require_tree ./directives
-//= require_tree ./filters
 //= require_tree ../../widgets
