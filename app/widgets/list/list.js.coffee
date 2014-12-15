@@ -3,7 +3,7 @@ angular.module("widgets").directive "listwidget", ->
   templateUrl: 'widgets/list.html',
   scope:
     title: '@'
-    items: '='
+    data: '='
   link:(scope, element, attrs) ->
     element.addClass('widget widget-list')
 
