@@ -1,0 +1,18 @@
+<script>
+    $(function(){ //DOM Ready
+        $(".gridster ul").gridster({
+            widget_margins: [5, 5],
+            widget_base_dimensions: [280, 340],
+            min_cols: 6
+        });
+    });
+</script>
+
+<div class="gridster">
+    <ul>
+        <li data-row="1" data-col="1" data-sizex="3" data-sizey="1">
+            <numberwidget class="widget" title="Omsetning" data="data.skovin_revenue"></numberwidget>
+        </li>
+    </ul>
+</div>
+<reloader minutes="60" manual-reload="data.reload"/>
