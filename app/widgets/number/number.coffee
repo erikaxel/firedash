@@ -10,12 +10,12 @@ angular.module("widgets").directive "numberwidget", ->
       if $scope.data.current? && $scope.data.budget?
         $scope.difference = $scope.data.current - $scope.data.budget
 
-        $element.removeClass 'status-ok status-warning'
+        $element.removeClass 'status-ok status-danger'
 
       if $scope.difference >= 0
         $element.addClass "status-ok"
       else
-        $element.addClass "status-warning"
+        $element.addClass "status-danger"
 
     $scope.$watch 'data.current', (newVal, oldVal) ->
       if newVal?

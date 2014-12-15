@@ -1,6 +1,6 @@
 <h1 class="title">{{title}}</h1>
 
 <div class="badge-container">
-    <badge ng-repeat="item in items" ng-model="item" filter="{{filter}}"/>
+    <badge ng-repeat="item in data.items" ng-model="item" filter="{{filter}}"/>
 </div>
-<p class="updated-at">{{updatedAtMessage}}</p>
+<%= render partial: '/shared/footer' %>

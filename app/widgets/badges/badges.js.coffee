@@ -5,4 +5,4 @@ angular.module("widgets").directive "badgeswidget", ->
   scope:
     title: '@'
     filter: '@'
-    items: '='
+    data: '='

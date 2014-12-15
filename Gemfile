@@ -28,3 +28,4 @@ gem 'spring',        group: :development
 gem 'rails_12factor', group: :production
 gem 'passenger', group: :production
 gem 'figaro'
+gem 'momentjs-rails'

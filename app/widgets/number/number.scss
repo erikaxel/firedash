@@ -2,10 +2,17 @@
 // Sass declarations
 // ----------------------------------------------------------------------------
 $background-color:  #47bbb3;
+
 $value-color:       #fff;
+$value-font-size:   120px;
+
+$change-rate-font-size:   $value-font-size * 0.5;
+
 
 $title-color:       rgba(255, 255, 255, 0.7);
 $moreinfo-color:    rgba(255, 255, 255, 0.7);
+
+
 
 // ----------------------------------------------------------------------------
 // Widget-number styles
@@ -19,13 +26,12 @@ numberwidget {
   }
 
   .value {
-    color: $value-color;
+    font-size: $value-font-size;
   }
 
   .change-rate {
     font-weight: 500;
-    font-size: 30px;
-    color: $value-color;
+    font-size: $change-rate-font-size;
   }
 
   .more-info {

@@ -13,8 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require moment
 //= require jquery.gridster.min
 //= require angularjs-numeral.min
+//= require angular-moment.min
 //= require app
 //= require_tree ./directives
+//= require_tree ./filters
 //= require_tree ../../widgets

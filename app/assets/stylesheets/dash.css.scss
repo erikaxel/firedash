@@ -4,17 +4,17 @@
 $background-color: #222;
 $text-color: #fff;
 
-$background-warning-color-1: #e82711;
-$background-warning-color-2: #9b2d23;
-$text-warning-color: #fff;
+$background-danger-color-1: #f2dede;
+$background-danger-color-2: #f2dede;
+$text-danger-color: #a94442;
 
-$background-danger-color-1: #eeae32;
-$background-danger-color-2: #ff9618;
-$text-danger-color: #fff;
+$background-warning-color-1: #fcf8e3;
+$background-warning-color-2: #fcf8e3;
+$text-warning-color: #8a6d3b;
 
-$background-ok-color-1: #96bf48;
-$background-ok-color-2: #96bf48;
-$text-ok-color: #fff;
+$background-ok-color-1: #5cb85c;
+$background-ok-color-2: #5cb85c;
+$text-ok-color: #3c763d;
 
 
 @-webkit-keyframes status-warning-background {
@@ -30,7 +30,6 @@ $text-ok-color: #fff;
 @mixin animation($animation-name, $duration, $function, $animation-iteration-count:""){
   -webkit-animation:  $animation-name $duration $function #{$animation-iteration-count};
   -moz-animation:     $animation-name $duration $function #{$animation-iteration-count};
-  -ms-animation:      $animation-name $duration $function #{$animation-iteration-count};
 }
 
 // ----------------------------------------------------------------------------
@@ -114,7 +113,7 @@ h3 {
 // Base widget styles
 // ----------------------------------------------------------------------------
 .gridster {
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 .icon-background {
@@ -151,6 +150,24 @@ h3 {
   vertical-align: middle;
 }
 
+.widget.status-ok{
+  color: $text-ok-color;
+  background-color: $background-ok-color-1;
+
+
+  //  .change-rate {
+  //    color: $text-ok-color;
+  //  }
+
+  .icon-warning-sign {
+    display: inline-block;
+  }
+
+  .title, .more-info, h2,.change-rate {
+    color: $text-ok-color;
+  }
+}
+
 .widget.status-warning {
   background-color: $background-warning-color-1;
   //  @include animation(status-warning-background, 2s, ease, infinite);
@@ -159,7 +176,7 @@ h3 {
     display: inline-block;
   }
 
-  .title, .more-info {
+  .title, .more-info, h2,.change-rate {
     color: $text-warning-color;
   }
 }
@@ -173,21 +190,7 @@ h3 {
     display: inline-block;
   }
 
-  .title, .more-info {
-    color: $text-danger-color;
-  }
-}
-
-
-.widget.status-ok{
-  color: $text-ok-color;
-  background-color: $background-ok-color-1;
-
-  .icon-warning-sign {
-    display: inline-block;
-  }
-
-  .title, .more-info {
+  .title, .more-info, h2,.change-rate {
     color: $text-danger-color;
   }
 }
@@ -212,15 +215,14 @@ h3 {
   display: none;
   position: fixed;
   top: 0;
-  margin: 0px auto;
   left: 50%;
   z-index: 1000;
   background: black;
   width: 190px;
   text-align: center;
   border: 1px solid white;
-  border-top: 0px;
-  margin-left: -95px;
+  border-top: 0;
+  margin: 0 auto 0 -95px;
   padding: 15px;
 }
 
@@ -230,7 +232,6 @@ h3 {
 
 #saving-instructions {
   display: none;
-  padding: 10px;
   width: 500px;
   height: 122px;
   z-index: 1000;
@@ -238,7 +239,7 @@ h3 {
   top: 100px;
   color: black;
   font-size: 15px;
-  padding-bottom: 4px;
+  padding: 10px 10px 4px;
 
   textarea {
     white-space: nowrap;
@@ -250,8 +251,8 @@ h3 {
 #lean_overlay {
   position: fixed;
   z-index:100;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   height:100%;
   width:100%;
   background: #000;

@@ -1,7 +1,11 @@
 angular.module("widgets",[])
 angular.module("firedash-directives",[])
-angular.module('dash', ['ngRoute', 'firebase', 'ngNumeraljs', 'widgets', 'firedash-directives'])
+angular.module('dash', ['ngRoute', 'firebase', 'ngNumeraljs', 'widgets', 'firedash-directives', 'angularMoment'])
   .value("fbURL", "https://scorching-inferno-3070.firebaseio.com/")
+  .constant "angularMomentConfig",
+#    timezone: 'Europe/Amsterdam',
+    format: 'YYYY-MM-DDTHH:mm:ss'
+
   .factory("Data", ['$firebase', '$firebaseAuth', 'fbURL', ($firebase, $firebaseAuth, fbURL) ->
     ref = new Firebase(fbURL)
     auth = $firebaseAuth(ref).$authWithPassword({email:firebase_email, password:firebase_password})

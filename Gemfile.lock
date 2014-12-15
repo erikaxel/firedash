@@ -54,6 +54,8 @@ GEM
       mime-types (>= 1.16, < 3)
     mime-types (2.4.3)
     minitest (5.4.3)
+    momentjs-rails (2.8.3)
+      railties (>= 3.1)
     multi_json (1.10.1)
     passenger (4.0.53)
       daemon_controller (>= 1.2.0)
@@ -123,6 +125,7 @@ DEPENDENCIES
   figaro
   jbuilder (~> 2.0)
   jquery-rails
+  momentjs-rails
   passenger
   rails (= 4.1.8)
   rails_12factor
