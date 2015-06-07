@@ -6,10 +6,10 @@ angular.module('dash', ['ngRoute', 'firebase', 'ngNumeraljs', 'widgets', 'fireda
 #    timezone: 'Europe/Amsterdam',
     format: 'YYYY-MM-DDTHH:mm:ss'
 
-  .factory("Data", ['$firebase', '$firebaseAuth', 'fbURL', ($firebase, $firebaseAuth, fbURL) ->
+  .factory("Data", ['$firebaseObject', '$firebaseAuth', 'fbURL', ($firebaseObject, $firebaseAuth, fbURL) ->
     ref = new Firebase(fbURL)
     auth = $firebaseAuth(ref).$authWithPassword({email:firebase_email, password:firebase_password})
-    $firebase(ref).$asObject()
+    $firebaseObject(ref)
 ])
 
 angular.module('dash').run(['$http', '$rootScope', '$window', '$location', 'Data', (($http, $rootScope, $window, $location, Data)->

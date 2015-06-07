@@ -3,10 +3,10 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'dash#index'
+  root 'dashboard#index'
 
-  get 'widgets/:type' => 'dash#widget'
-  get ':type' => 'dash#index'
+  get 'widgets/:type' => 'dashboard#widget'
+  get ':type' => 'dashboard#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
