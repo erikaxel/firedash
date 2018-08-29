@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
-ruby '2.2.2'
+ruby '2.5.1'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.1'
+gem 'rails', '5.2.1'
 # Use SCSS for stylesheets
 gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'rails_12factor', group: :production
-gem 'passenger', group: :production
+gem 'puma', '~> 3.0' # BSD 3
+gem 'puma-heroku', group: :production # MIT-License
 gem 'figaro'
 gem 'momentjs-rails'
